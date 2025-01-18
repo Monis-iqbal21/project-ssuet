@@ -28,7 +28,7 @@ const Navbar = () => {
             Help
           </Link>
           |
-          <Link href="/all-product" className="">
+          <Link href="/pages/register" className="">
             Join Us
           </Link>
           |

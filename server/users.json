@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "dob": "1990-01-01",
+        "country": "USA",
+        "gender": "Male"
+    },
+    {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "password": "securepass456",
+        "dob": "1985-05-15",
+        "country": "Canada",
+        "gender": "Female"
+    },
+    {
+        "firstName": "ad",
+        "lastName": "dd",
+        "email": "ad@mail.com",
+        "password": "123456",
+        "dob": "2025-01-02",
+        "country": "usa",
+        "gender": "Male"
+    },
+    {
+        "firstName": "Abdullah",
+        "lastName": "Bin jalal",
+        "email": "abdullahbinjalal@outlook.com",
+        "password": "123456",
+        "dob": "2002-12-31",
+        "country": "uk",
+        "gender": "Male"
+    },
+    {
+        "firstName": "asd",
+        "lastName": "asd",
+        "email": "asd@asd.com",
+        "password": "asd",
+        "dob": "2025-01-02",
+        "country": "canada",
+        "gender": "Male"
+    },
+    {
+        "firstName": "Abdullah",
+        "lastName": "Bin jalal",
+        "email": "abdullahbinjalal@outlook12312.com.com",
+        "password": "12415614123",
+        "dob": "2025-01-03",
+        "country": "australia",
+        "gender": "Male"
+    },
+    {
+        "firstName": "wda",
+        "lastName": "wda",
+        "email": "wdaw@adw",
+        "password": "wdawda",
+        "dob": "2025-01-02",
+        "country": "canada",
+        "gender": "Male"
+    },
+    {
+        "firstName": "mmm",
+        "lastName": "mmm",
+        "email": "mmm@aw",
+        "password": "12345",
+        "dob": "2025-01-03",
+        "country": "uk",
+        "gender": "Male"
+    },
+    {
+        "firstName": "fgfgf",
+        "lastName": "gfgfgf",
+        "email": "nnnn@nnn",
+        "password": "nnnnn",
+        "dob": "2025-01-03",
+        "country": "australia",
+        "gender": "Male"
+    },
+    {
+        "firstName": "monis",
+        "lastName": "wqweq",
+        "email": "awdaw@awda",
+        "password": "wdawdaw",
+        "dob": "2025-01-01",
+        "country": "uk",
+        "gender": "Male"
+    },
+    {
+        "firstName": "wqeee",
+        "lastName": "eeeeeee",
+        "email": "lololol@lololol",
+        "password": "12345",
+        "dob": "2025-01-04",
+        "country": "uk",
+        "gender": "Male"
+    },
+    {
+        "firstName": "bbbb",
+        "lastName": "vvvvv",
+        "email": "bbbb@aaa",
+        "password": "12345",
+        "dob": "2025-01-03",
+        "country": "uk",
+        "gender": "Male"
+    },
+    {
+        "firstName": "wadascx",
+        "lastName": "xcxcx",
+        "email": "jjjj@jjj",
+        "password": "123455",
+        "dob": "2025-01-10",
+        "country": "canada",
+        "gender": "Male"
+    },
+    {
+        "firstName": "wawda",
+        "lastName": "awdsdas",
+        "email": "adawdawdawdawd@nsada",
+        "password": "awwdawda",
+        "dob": "2025-01-01",
+        "country": "uk",
+        "gender": "Male"
+    }
+]

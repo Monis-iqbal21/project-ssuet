@@ -4,13 +4,13 @@ const handleSubmit = async (event) => {
   const password = event.target.password.value;
 
   try {
-      const response = await fetch("http://localhost:5000/login", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-      });
+    const response = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    });
 
       if (response.ok) {
           const data = await response.json();
