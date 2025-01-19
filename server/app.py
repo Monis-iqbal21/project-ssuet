@@ -11,14 +11,25 @@ CORS(app, resources={r"/*": {"origins": "*", "methods": "OPTIONS, POST, GET"}})
 # File to store user data
 FILE_PATH = "server\\users.json"
 
+
+
+
+
 def load_user_data():
     if os.path.exists(FILE_PATH):
         try:
             with open(FILE_PATH, "r") as file:
-                return json.load(file)  # Use json.load() to parse the file content
+                data = json.load(file)  # Parse the file content
+                print(data, "data")  # Debugging: print the loaded data
+                return data # changed this due to an error
         except json.JSONDecodeError as e:
-            raise e  # If JSON is invalid, raise the error
+            print(f"JSON Decode Error: {e}")
+            raise e  # Raise the error if the JSON is invalid
     return []  # Return an empty list if the file doesn't exist or is empty
+
+
+
+
 
 # Function to save user data to the file
 def save_user_data(data):

@@ -2,18 +2,23 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./login.css";
+import { useUserContext } from "../../context/user";
 
 const LoginPage = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { login } = useUserContext();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError(""); // Clear previous errors
+
+
 
     try {
       const response = await fetch("http://localhost:5000/login", {
@@ -25,7 +30,11 @@ const LoginPage = () => {
       const data = await response.json();
 
       if (response.ok) {
-        router.push("/"); // Navigate to the home page
+        // localStorage.setItem("user", JSON.stringify({ email: email }));
+        
+        login({ email: email });
+        router.push("/");
+         // Navigate to the home page
       } else {
         setError(data.error || "Invalid credentials");
       }

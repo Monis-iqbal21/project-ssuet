@@ -61,7 +61,7 @@ margin-bottom: 20px;
 .pro_btn::before {
     content: '';
     display: inline-block;
-    background-image: url('../../../../public/images/cart.png'); /* Update the path if necessary */
+    background-image: url('../../../../../public/images/cart.png'); /* Update the path if necessary */
     background-size: contain;
     background-repeat: no-repeat;
     width: 20px; /* Icon width */

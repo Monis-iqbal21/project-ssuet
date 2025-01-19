@@ -126,5 +126,14 @@
         "dob": "2025-01-01",
         "country": "uk",
         "gender": "Male"
+    },
+    {
+        "firstName": "dawdawd",
+        "lastName": "awdawda",
+        "email": "wdawda@kkkk.com",
+        "password": "12",
+        "dob": "2024-12-06",
+        "country": "uk",
+        "gender": "Male"
     }
 ]

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./components-css/navbar.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,8 +8,24 @@ import logo2 from "../../../public/images/logo2.png";
 import search from "../../../public/images/search.png";
 import love from "../../../public/images/love.png";
 import shop from "../../../public/images/shop.png";
+import { useUserContext } from "../context/user";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  // const [user, setUser] = useState(null);
+  const {  user,logout } = useUserContext();
+  const router = useRouter();
+
+  // Check for logged-in user on component mount
+  
+
+
+  // Logout function
+  const handleLogout = () => {
+    logout();
+    router.push('/pages/login');
+  };
+
   return (
     <div className="w-full h-[136}] navbar_main_container">
       {/*  top navbar   */}
@@ -20,26 +37,43 @@ const Navbar = () => {
         </div>
 
         <div className="top_nav_links">
-          <Link href="/all-product" className="">
-            Find a Store
-          </Link>
-          |
-          <Link href="/all-product" className="">
-            Help
-          </Link>
-          |
-          <Link href="/pages/register" className="">
-            Join Us
-          </Link>
-          |
-          <Link href="/pages/login" className="">
-            Sign In
-          </Link>
+          {user ? (
+            <>
+              {/* <Link href="/all-product" className="">
+                Find a Store
+              </Link>
+              |
+              <Link href="/all-product" className="">
+                Help
+              </Link> */}
+              |<span>Welcome, {user.email}</span>
+              <button onClick={handleLogout} className="logout_btn">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              {/* <Link href="/all-product" className="">
+                Find a Store
+              </Link>
+              |
+              <Link href="/all-product" className="">
+                Help
+              </Link>
+              | */}
+              <Link href="/pages/register" className="">
+                Join Us
+              </Link>
+              |
+              <Link href="/pages/login" className="">
+                Sign In
+              </Link>
+            </>
+          )}
         </div>
       </div>
 
       {/*  bottom navbar   */}
-
       <div className="nav_bottom_container w-full">
         <div className="w-[78.5px]">
           <Link href={"/"}>
@@ -63,7 +97,7 @@ const Navbar = () => {
           <Link href="/all-product" className="navBottom_link">
             Women
           </Link>
-          <Link href="/all-product" className="navBottom_link">
+          {/* <Link href="/all-product" className="navBottom_link">
             Kids
           </Link>
           <Link href="/all-product" className="navBottom_link">
@@ -71,7 +105,7 @@ const Navbar = () => {
           </Link>
           <Link href="/all-product" className="navBottom_link">
             SNKRS
-          </Link>
+          </Link> */}
         </div>
 
         <div className="nav_bottom_search_cart_div">
@@ -86,12 +120,11 @@ const Navbar = () => {
               className="search_input_field"
             />
           </div>
-          <Link href="/all-product">
+          {/* <Link href="/all-product">
             <Image src={love} alt="search" width={16.7} height={16.7} />
-          </Link>
+          </Link> */}
 
-          <Link href={"/"}>
-            {" "}
+          <Link href={"/pages/AddToCart"}>
             <Image src={shop} alt="search" width={16.7} height={16.7}></Image>
           </Link>
         </div>

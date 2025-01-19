@@ -55,7 +55,7 @@
 
 .nav_bottom_link_div{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 760px;
     padding: 0 25px 0 210px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
